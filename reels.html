@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta http-equiv="X-UA_Compatible" content="IE-edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <title>Reels</title>
+        <link rel="stylesheet" href="reels.css"/>
+        <link data-default-icon="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg" rel="icon" sizes="192x192" 
+              href="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg"/>
+        <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" crossorigin="anonymous"/>
+        <script src="https://unpkg.com/feather-icons"></script>
+    </head>
+    <body>  
+        <div class="left-sidebar"> 
+            <div class="upper-container">
+                <img src="images/instagram.png" class="logo"/>
+                <img src="images/instagram logo.svg" class="logo2"/>
+                <div class="link">
+                    <img src="images/house-solid.svg"style="height: 1.5rem;margin-right: 0.5rem"/>
+                    <a href="index.html" >Home</a>
+                </div>
+                <div class="link">
+                    <img src="images/magnifying-glass-solid.svg"style="height: 1.5rem;margin-right: 0.5rem"/>
+                    <a href="search.html">Search</a>
+                </div>
+                <div class="link">
+                    <img src="images/compass-regular.svg"style="height: 1.5rem;margin-right: 0.5rem"/>
+                    <a href="explore.html">Explore</a>
+                </div>
+                <div class="link">
+                    <img src="images/video.png"style="height: 1.5rem;margin-right: 0.5rem"/>
+                    <a href="reels.html">Reels</a>
+                </div>
+                <div class="link">
+                    <img src="images/facebook-messenger.svg"style="height: 1.5rem;margin-right: 0.5rem"/>
+                    <a href="messages.html">Messages</a>
+                </div>
+                <div class="link">
+                    <img src="images/heart-regular.svg"style="height: 1.5rem;margin-right: 0.5rem"/>
+                    <a href="notification.html">Notifications</a>
+                </div>
+                <div class="link">
+                    <img src="images/square-plus-regular.svg"style="height: 1.5rem;margin-right: 0.5rem"/>
+                    <a href="create.html">Create</a>
+                </div>
+                <div class="link">
+                <img src="images/yaswin.jpg" style="height: 2+rem;margin-right: 0.5rem" class="profile-pic"/>
+                <a href="profile.html">Profile</a>
+                </div>
+           </div>
+           <div class="bottom-container">
+                <div class="link">
+                    <img src="images/bars-solid.svg" style="height: 1.5rem;margin-right: 0.5rem;"/>
+                    <a href="#">More</a>
+                </div>
+            </div>
+        </div>
+        <div class="bottom-navbar">
+            <img src="images/house-solid.svg"style="height: 1.5rem;margin-right: 0.5rem"/>
+            <img src="images/magnifying-glass-solid.svg"style="height: 1.5rem;margin-right: 0.5rem"/>
+            <img src="images/square-plus-regular.svg"style="height: 1.5rem;margin-right: 0.5rem"/>
+            <img src="images/video.png"style="height: 1.5rem;margin-right: 0.5rem"/>
+            <img src="images/yaswin.jpg" style="height: 2+rem;margin-right: 0.5rem" class="profile-pic"/>
+        </div>
+        </div>
+
+        <div class="main-container">
+            <div class="app_videos">
+                <div class="video">
+                    <video src="images/video.mp4" class="video_player" controls></video>
+                    <div class="videofooter">
+                        <div class="videofooter_text">
+                            <img class="user_avatar" src="images/charu.jpg">
+                            <h3>abishek • Follow</h3>
+                        </div>
+                        <div class="videofooter_ticker">
+                             <span class="material-symbol">
+                                <img src="images/music-solid.svg" alt="">
+                             </span>
+                             <marquee>Song name</marquee>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="videofooter_actions">
+            <div class="material-symbols-outlined">
+                <div id="likeButton" style="background-color: white;"><img src="images/red heart.png" style="height: 1.7rem;"></div>
+            </div>
+            <div class="material-symbols-outlined">
+                <img src="images/comment-regular.svg" style="height: 1.7rem;">
+            </div>
+            <div class="material-symbols-outlined">
+                <img src="images/paper-plane-regular.svg" style="height: 1.5rem;">
+            </div>
+            <div class="material-symbols-outlined">
+                <img src="images/bookmark-regular.svg" style="height: 1.5rem; width: 20px;">
+            </div> 
+            <div class="material-symbols-outlined">
+                <img src="images/more-horizontal.svg" style="height: 1.5rem;">
+            </div>
+        
+        </div>
+
+        
+        <script>
+            const videos = document.querySelectorAll('video');
+            for(const video of videos)
+            {
+                video.addEventListener('click',function()
+                {
+                    if(video.paused)
+                    {
+                        video.play();
+                    }
+                    else
+                    {
+                        video.pause();
+                    }
+                });
+            }
+        const likeButton = document.getElementById('likeButton');
+        let likesCount = 0;
+        likeButton.addEventListener('click', function() 
+        {
+            likesCount++;
+            document.getElementById('likeButton').innerHTML="<img src='images/red heart.png' style='height: 1.7rem;'> <br> "+likesCount 
+        });
+        </script>
+    </body>
+</html>
+
+

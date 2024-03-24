@@ -1,0 +1,70 @@
+html,body{
+  scroll-behavior: smooth;
+  background: transparent;
+  font-family: "Roboto";
+  color: black;
+  display: flex;
+  width: 200vh;
+  height: 200vh;
+  overflow-x: hidden;
+}  
+.create-page{
+  background: rgba(250, 246, 246, 0.5);
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100vh;
+  text-align: center;
+  display: grid;
+  place-items: center;
+  font-size: 0.9rem;
+}
+.create-page .card{
+  background: white;
+  padding: 3rem;
+  border-radius: 1rem;
+  width: 20vw;
+  position: relative;
+}
+
+.close{
+  position:absolute;
+  top: 0;
+   right: 14px;
+   font-size: 42px;
+   transform: rotate(45deg);
+   cursor: pointer;
+}
+
+img{
+  height: 3.5rem;
+}
+
+
+.btn{
+  
+  margin-top: 40px;
+  width: 20vw;
+  cursor: pointer;
+  color: white;
+  border: none;
+  font-size: 18px;
+  border-radius: 10px;
+  transition: 0.4s;
+  padding: 12px;
+  outline: none;
+  background: #800080;
+}
+
+.btn:hover {
+
+  background: #c907c9;
+
+}
+
+  
+  
+
+
